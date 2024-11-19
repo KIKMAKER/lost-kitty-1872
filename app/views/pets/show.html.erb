@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h1>Someone found this <%= @pet.species %></h1>
+  <h2>Where?</h2>
+  <p>It was found in <%= @pet.location %>.</p>
+
+  <h2>When?</h2>
+  <p>It was found on <%= @pet.date.strftime('%A, %b %d') %> </p>
+
+
+  <%= link_to "edit", edit_pet_path(@pet), class: "btn btn-danger"  %>
+
+  <%= link_to "all pets", pets_path %>
+</div>

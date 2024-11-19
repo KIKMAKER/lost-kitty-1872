@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h1>Found Pets</h1>
+  <% @pets.each do |pet| %>
+    <div class="card mb-3" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= pet.species %></h5>
+<!--        <h6 class="card-subtitle mb-2 text-body-secondary">A <%#= pet.colour %> <%= pet.species %></h6>
+        <p class="card-text">Was found at <%#= pet.location %> on <%= pet.date %>.</p>-->
+        <%= link_to "more info", pet_path(pet) %>
+        <%= link_to "remove", pet_path(pet), data: {turbo_method: :delete, turbo_confirm: "Serious;y???!"} %>
+      </div>
+    </div>
+    <% end %>
+
+  <%= link_to "Found a pet!", new_pet_path, class: "btn btn-primary" %>
+  </div>

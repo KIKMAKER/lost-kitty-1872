@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Change something about this <%= @pet.species %></h1>
+  <%= simple_form_for @pet do |f| %>
+    <%= f.input :species %>
+    <%= f.input :colour %>
+    <%= f.input :location %>
+    <%= f.input :date %>
+    <%= f.submit %>
+  <% end %>
+</div>
